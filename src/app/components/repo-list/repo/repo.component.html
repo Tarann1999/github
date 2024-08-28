@@ -1,0 +1,10 @@
+<div class="unit-container">
+<a class="title-text" (click)="selectRepo()" [routerLink]="'/repoInfo'" routerLinkActive="active">{{information.full_name}}</a>
+<span class="secondary-text">{{information.description}} </span>
+<div class="sub-details">
+    <div class="symbol-text-flex"><div class="language-div" [ngStyle]="{'background-color':color}"></div><div>{{repolanguage}}</div></div>
+    <div class="symbol-text-flex"><app-svg-repo [Name]="'star-icon'"></app-svg-repo> <div>2,433</div></div>
+    <div class="symbol-text-flex"><app-svg-repo [Name]="'star-icon'"></app-svg-repo> <div>193</div></div>
+    <div class="symbol-text-flex"><div class="secondary-text">Built by</div> <img [src]="information.owner.avatar_url" alt=""></div>
+</div>
+</div>

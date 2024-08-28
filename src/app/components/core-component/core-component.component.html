@@ -1,0 +1,26 @@
+
+  <nav class="secondary-bar flex-bar" >
+    <div class="link-flex">
+      <div class="secondary-text" *ngFor="let navElement of navList" [ngClass]="{'selected-text':selectedNav==navElement}">{{navElement}}</div> 
+    </div>
+    <button>Get email updates</button>
+  
+  </nav>
+  <header class="nav-bar flex-bar trending-pane"> 
+    <span class="trending-span">Trending</span>
+    <span class="secondary-text">See what the GitHub community is most excited about today.</span>
+  
+  </header>
+  <div class="main-container">
+    <div class="inner-container">
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-option first select" (click)="repoBoolean = true" [ngClass]="{'select':repoBoolean}">Repositories</div>
+          <div class="toggle-option last" (click)="repoBoolean = false" [ngClass]="{'select':!repoBoolean}">Developers</div>
+        </div>
+        
+      </div> 
+    <app-repo-list *ngIf="repoBoolean"></app-repo-list>
+      <app-user-list *ngIf="!repoBoolean"> </app-user-list>
+    </div>
+  </div>

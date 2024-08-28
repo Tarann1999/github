@@ -1,0 +1,47 @@
+ 
+<div class="profile-container">
+    <aside class="profile-sidebar">
+        <div class="profile-picture">
+            <img [src]="profilepath" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <div class="title-text" style="color: var(--text);">{{information.name}}</div>
+            <p class="secoindary-text">{{information.login}}</p>
+            <p>Currently working in KAN LABS, NYC, USA as an ML Engineer</p>
+            <button>Edit profile</button> 
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <nav class="profile-nav">
+            <ul>
+                <li>Overview</li>
+                <li class="active">Repositories <span>{{information.public_repos}}</span></li>
+                <li>Projects</li>
+                <li>Packages</li>
+                <li>Stars</li>
+            </ul>
+        </nav>
+
+        <div class="repository-search">
+            <input type="text" placeholder="Find a repository...">
+            <div class="search-filters">
+                <button>Type</button>
+                <button>Language</button>
+                <button>Sort</button>
+                <button class="new-btn">New</button>
+            </div>
+        </div>
+
+        <div class="repository-list">
+            <div class="repository-item" *ngFor="let i of repoList">
+                <div class="repo-info" >
+                    <a >{{i.name}}</a>
+                    <p *ngIf="i.private">Private</p>
+                    <p *ngIf="!i.private">Private</p>
+                </div>
+                <button class="star-btn">Star</button>
+            </div> 
+        </div>
+    </main>
+</div>

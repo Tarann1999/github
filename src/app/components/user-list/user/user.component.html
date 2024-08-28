@@ -1,0 +1,18 @@
+
+    <div class="profile-container" (click)="selectUser()">
+        <div class="profile-info">
+            <img [src]="information.avatar_url" alt="Pekka Enberg" class="profile-pic">
+            <div class="profile-details">
+                <a   class="title-text">{{information.login}}</a>
+                <p class="secondary-text"style="margin:0px">{{information.login}}</p>
+            </div>
+        </div>
+        <div class="repo-info">
+            <p class="repo-label">🔥 POPULAR REPO</p>
+            <a   class="repo-name">limbo</a>
+            <p class="repo-description">
+                Limbo is a work-in-progress, in-process OLTP database management system, compatible with SQLite.
+            </p>
+        </div>
+        <button class="follow-btn">Follow</button>
+    </div>

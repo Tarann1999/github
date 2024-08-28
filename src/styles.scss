@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --dark-active: #0D1117;
+    --light-active: #161B22;
+    --border: #30363D;
+    --text:#ffffff;
+    --select:#58A6FF;
+    --secondary-text:#8B949E;
+    --green:#238636;
+}
+
+body,html{
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: var(--text);
+    font-family: Helvetica;
+    background-color: var(--dark-active);
+    width: 100%;
+    overflow-x: hidden;
+} 
+.toggle{
+    display: flex;
+    height: 24px;    
+    border: 1px solid var(--border);
+    width: fit-content;
+    border-radius: 4.5px;
+    .first{border-radius: 4px 0px 0px 4px ;}
+    .last{border-radius:  0px 4px 4px 0px;}
+    .toggle-option{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background-color: var(--light-active);
+        padding: 5px;
+        
+    }
+    .select{
+        background-color: var(--select) !important;
+    }
+
+
+}
+select,input {
+    color: var(--text);
+    background-color: var(--dark-active);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    height: 30px;
+    width: 200px;
+}
+button{
+    height: 30px;
+    width: 150px;
+    background-color: var(--light-active);
+    border: 1px solid var(--border);
+    border-radius: 4.5px;
+    color: var(--text);
+}
+.unit-container{
+    display: flex;
+    flex-direction:column;
+    gap: 3.5px;
+    border-bottom: 1px solid var(--border);
+    padding: 14px;
+}
+.title-text{
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--select);
+}
+.secondary-text{
+    color: var(--secondary-text);
+}
+.symbol-text-flex{
+    display: flex;
+    align-items: center;
+    gap: 3.5px;
+} 
+.sub-details{
+    display: flex;
+    gap: 21px;
+    img{
+        border-radius: 50%;
+        width: 20px ;
+        height: 20px;
+    }
+}
+.language-div{
+    border-radius: 50%;
+        width: 15px ;
+        height: 15px;
+}
+.selected-text{
+    color: var(--text);
+    border-bottom: 2px solid var(--select);
+}
