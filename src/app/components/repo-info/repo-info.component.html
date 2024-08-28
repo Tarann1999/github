@@ -1,4 +1,3 @@
-
 <div class="header">
     <div class="repo-details">
         <h1>{{information.full_name}}</h1>
@@ -6,23 +5,17 @@
     </div>
     <nav class="nav">
         <ul>
-            <!-- <li *ngFor="let navElement of navList">{{navElement}}</li> -->
-            <li style="cursor: pointer;" class="selected-text" *ngFor="let navElement of navList" [ngClass]="{'selected-text':selectedNav==navElement} "class="secondary-text">{{navElement}}</li>
-            <!-- <li style="cursor: not-allowed;" ></li>
-            <li style="cursor: not-allowed;" class="secondary-text"></li>
-            <li style="cursor: not-allowed;" class="secondary-text"></li>
-            <li style="cursor: not-allowed;" class="secondary-text"></li>
-            <li style="cursor: not-allowed;" class="secondary-text"></li>
-            <li style="cursor: not-allowed;" class="secondary-text"></li> -->
+            <li style="cursor: pointer;" class="selected-text" *ngFor="let navElement of navList"
+                [ngClass]="{'selected-text':selectedNav==navElement} " class="secondary-text">{{navElement}}</li>
         </ul>
     </nav>
 </div>
 
 <div class="main-content">
-     
+
 
     <section class="code-section">
-        
+
         <div class="repo-actions">
             <div class="branch-info">
                 <span>Main</span>
@@ -30,39 +23,42 @@
                 <span>0 tags</span>
                 <button>Go to file</button>
             </div>
-            
+
             <button class="button">Code</button>
         </div>
         <div class="file-list">
-                <div class="file-list-header">
-                    <div class="user-info">
-                        <img [src]="information.owner.avatar_url" alt="User Profile Image" class="profile-img">
-                        <span class="username">{{information.owner.login}}</span>
-                        <span class="commit-message">more empty lines</span>
-                    </div>
-                    <div class="commit-details">
-                        <span class="commit-hash">15cbc52</span>
-                        <span class="commit-activity">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                                <path d="M8 3.5a.5.5 0 0 1 .5.5v4.086l2.036 1.22a.5.5 0 1 1-.536.844l-2.5-1.5A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/>
-                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z"/>
-                            </svg>
-                            162 commits
-                        </span>
-                    </div>
+            <div class="file-list-header">
+                <div class="user-info">
+                    <img [src]="information.owner.avatar_url" alt="User Profile Image" class="profile-img">
+                    <span class="username">{{information.owner.login}}</span>
+                    <span class="commit-message">more empty lines</span>
                 </div>
-                <div class="symbol-text-flex" *ngFor="let folder of foldersList"><span class="folder-icon"></span> <a [href]="folder.html_url">{{folder.path}}</a></div> 
-            
+                <div class="commit-details">
+                    <span class="commit-hash">15cbc52</span>
+                    <span class="commit-activity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-clock" viewBox="0 0 16 16">
+                            <path
+                                d="M8 3.5a.5.5 0 0 1 .5.5v4.086l2.036 1.22a.5.5 0 1 1-.536.844l-2.5-1.5A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z" />
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z" />
+                        </svg>
+                        162 commits
+                    </span>
+                </div>
+            </div>
+            <div class="symbol-text-flex" *ngFor="let folder of foldersList"><span class="folder-icon"></span> <a
+                    [href]="folder.html_url">{{folder.path}}</a></div>
+
         </div>
     </section>
 
     <aside class="about-section">
         <h2>About</h2>
         <p class="information-para">{{information.description}}</p>
-            <div class="symbol-text-flex"><app-svg-repo [Name]="'repo-icon'"></app-svg-repo> MIT License </div>
-            <div class="symbol-text-flex"><app-svg-repo [Name]="'pulse-icon'"></app-svg-repo> Activity </div>
-            <div class="symbol-text-flex"><app-svg-repo [Name]="'star-icon'"></app-svg-repo> 3 stars </div>
-            <div class="symbol-text-flex"><app-svg-repo [Name]="'eye-icon'"></app-svg-repo> 9 watching</div>
+        <div class="symbol-text-flex"><app-svg-repo [Name]="'repo-icon'"></app-svg-repo> MIT License </div>
+        <div class="symbol-text-flex"><app-svg-repo [Name]="'pulse-icon'"></app-svg-repo> Activity </div>
+        <div class="symbol-text-flex"><app-svg-repo [Name]="'star-icon'"></app-svg-repo> 3 stars </div>
+        <div class="symbol-text-flex"><app-svg-repo [Name]="'eye-icon'"></app-svg-repo> 9 watching</div>
             <div class="symbol-text-flex"><app-svg-repo [Name]="'fork-icon'"></app-svg-repo> 0 forks</div>
             
     </aside>
